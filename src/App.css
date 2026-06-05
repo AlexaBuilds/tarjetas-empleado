@@ -5,37 +5,44 @@
 /* --- Estilos para la cabecera --- */
 .cabecera-app {
   text-align: center; /* Centra el título y el párrafo */
-  margin-bottom: 40px; /* Añade un espacio debajo de la cabecera para separarla de las tarjetas */
-  padding: 20px; /* Añade un poco de aire alrededor del texto */
+  margin-bottom: 50px; /* Modificado al estándar del profesor para dar más aire */
 }
 
 .cabecera-app h1 {
-  margin-bottom: 8px; /* Reduce el espacio entre el h1 y el párrafo */
+  font-size: 2.5rem; /* Tamaño exacto del profesor */
+  color: var(--text-primary);
+  margin-bottom: 10px;
 }
 
 /* --- Estilos para la galería de tarjetas (LA PARTE MÁS IMPORTANTE) --- */
 .galeria-empleados {
   /* --- 1. Activar Flexbox --- */
-  /* Convierte la sección en un contenedor "flexible". 
-     Esto hace que sus hijos (las tarjetas) se pongan en una fila horizontal. */
   display: flex;
 
   /* --- 2. Centrar las tarjetas horizontalmente --- */
-  /* 'justify-content: center' alinea el grupo de tarjetas en el centro de la página. */
   justify-content: center;
 
   /* --- 3. Permitir que las tarjetas bajen a la siguiente línea --- */
-  /* ¡CLAVE PARA EL DISEÑO RESPONSIVE! 'wrap' permite que las tarjetas que no caben
-     en una línea salten ordenadamente a la línea de abajo. */
   flex-wrap: wrap;
 
   /* --- 4. Crear espacio entre las tarjetas --- */
-  /* 'gap' define un espacio o "hueco" entre cada tarjeta, tanto al lado como debajo.
-     Es la forma moderna y fácil de separar elementos. */
-  gap: 30px; /* Puedes cambiar 30px por el valor que prefieras */
+  gap: 40px; /* Ajustado a los 40px del profesor para separación perfecta */
+}
 
-  /* --- 5. Añadir relleno al contenedor (Opcional pero recomendado) --- */
-  /* 'padding' añade un espacio interior para que las tarjetas nunca se peguen
-     a los bordes de la pantalla. */
-  padding: 20px;
+/* --- LA CLAVE: Estilos para el Banner Superior --- */
+.imagen-banner {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  display: block; /* Forzamos el renderizado como bloque independiente */
+}
+
+/* --- Contenedor general que limita el ancho de la web --- */
+.contenedor-principal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
